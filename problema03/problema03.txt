@@ -1,0 +1,16 @@
+1. Inicio
+2. limite, i[0, n] <-- 10
+3. numerador, i[0, n] <-- 1
+5. denominador, i[0, n] <-- 1
+7. cadena, x(1000)[{0-9},{-,+, BS, /}] <-- ""
+8. signo x(1)[{-,+, BS}] <-- ""
+9. Para(denominador<--1, denominador<=limite, 2) haga
+	10.Si (denominador = 3 OR denominador = 7) entonces
+		11.signo = -
+		12.Caso contrario
+		13.signo = +
+		14.Fin Si
+15.     cadena <-- cadena + signo +numerador + "/" + denominador+" "
+16. Fin_Para
+17. Escribir cadena
+18. Fin

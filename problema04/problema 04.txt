@@ -1,0 +1,33 @@
+1. Inicio
+2. nombre x(40)[{A-Z}, {a-z}, BS}]
+3. posicion x(15)[{A-Z}, {a-z}, BS}]
+4. edad, i[0, n]
+5. estatura, d[0, n]
+6. contador, i[0, n] <-- 1
+7. cadena, x(1000)[{0, n},{{A-Z}, {a-z}, BS,-}] <-- ""
+8. estaturaprom, d[0,n]
+9. edadesprom, d[0,n]
+10. bandera = true
+11. Haga_hasta
+	12. << Ingrese el nombre del jugador
+	13. >> nombre
+	14. << Ingrese la posición de juego
+	15. >> posicion
+	16. << Ingrese la edad del jugador
+	17. >> edad
+	18. << Ingrese la estatura del jugador
+	19. >> estatura
+	20. estaturaprom = (estaturaprom + estatura)/contador
+	21. edadesprom = (edadesprom + edad)/contador
+	22. cadena = contador + "." + cadena + nombre + "-" + posicion + "-" + "," + "edad" + edad + "," + "estatura" + estatura + ""
+	// el contador en la cadena esta funcionando como un numero que se ubica al inicio de cada informacion de un jugador y ordenara del 1 - n las entradas del usuario
+	23. contador = contador + 1
+	24. << Ingrese "si" para terminar el programa
+	25. >> bandera
+	26. Si (bandera = si) entonces
+		27. bandera = false
+	28. Fin Si
+29. Fin Haga_hasta (bandera = false)
+30. << cadena
+31. << "Promedio de edades:" edadesprom + "Promedio de estaturas:" + estaturaprom
+32. Fin
